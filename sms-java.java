@@ -55,13 +55,13 @@ public class StudentManagementSystem {
         String grade = sc.nextLine();
 
         students.add(new Student(id, name, age, grade));
-        System.out.println("✅ Student added successfully!");
+        System.out.println("Student added successfully!");
     }
 
     // Display all students
     public static void displayStudents() {
         if (students.isEmpty()) {
-            System.out.println("⚠️ No students found.");
+            System.out.println(" No students found.");
             return;
         }
         System.out.println("\n--- Student List ---");
@@ -76,11 +76,11 @@ public class StudentManagementSystem {
         int id = sc.nextInt();
         for (Student s : students) {
             if (s.getId() == id) {
-                System.out.println("✅ Student Found: " + s);
+                System.out.println("Student Found: " + s);
                 return;
             }
         }
-        System.out.println("❌ Student not found!");
+        System.out.println(" Student not found!");
     }
 
     // Update student info
@@ -101,11 +101,11 @@ public class StudentManagementSystem {
                 System.out.print("Enter new Grade: ");
                 s.setGrade(sc.nextLine());
 
-                System.out.println("✅ Student updated successfully!");
+                System.out.println(" Student updated successfully!");
                 return;
             }
         }
-        System.out.println("❌ Student not found!");
+        System.out.println(" Student not found!");
     }
 
     // Delete student
@@ -115,11 +115,11 @@ public class StudentManagementSystem {
         for (Student s : students) {
             if (s.getId() == id) {
                 students.remove(s);
-                System.out.println("✅ Student deleted successfully!");
+                System.out.println("Student deleted successfully!");
                 return;
             }
         }
-        System.out.println("❌ Student not found!");
+        System.out.println(" Student not found!");
     }
 
     public static void main(String[] args) {
@@ -141,9 +141,10 @@ public class StudentManagementSystem {
                 case 3 -> searchStudent();
                 case 4 -> updateStudent();
                 case 5 -> deleteStudent();
-                case 6 -> System.out.println("👋 Exiting... Goodbye!");
-                default -> System.out.println("❌ Invalid choice! Try again.");
+                case 6 -> System.out.println(" Exiting... Goodbye!");
+                default -> System.out.println(" Invalid choice! Try again.");
             }
         } while (choice != 6);
     }
 }
+
